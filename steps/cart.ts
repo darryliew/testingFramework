@@ -1,4 +1,4 @@
-import {When,TableDefinition} from "cucumber";
+import {TableDefinition, When} from "cucumber";
 import {api} from "../shared/utils";
 import {CART} from "../shared/config";
 import {Cart} from "../shared/classes/cart";
@@ -13,8 +13,13 @@ When('I add a items to my cart', async function (table: TableDefinition) {
 When('I view my cart and verify the data is correct', async function (table: TableDefinition) {
     await api.get(CART, this.headers)
 
-    const rows = table.hashes()
-    for (const row of rows) {
-        expect(api.response['data'].items[row[0]]).to.be.equals(row[1])
+    const rows = table.raw();
+    const entries = Object.entries(api.response['data'].items[0]);
+    let i = 0
+    for (const [responseKey, responseValue] of entries) {
+        const row = rows[i];
+        expect(responseKey).to.be.equals(row[0]);
+        parseInt(row[1]) ? expect(parseInt(row[1])).to.be.equals(responseValue) : expect(row[1]).to.be.equals(responseValue);
+        i++;
     }
 })

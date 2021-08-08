@@ -26,7 +26,3 @@ export const verifyResponseStatus = (status: number): void => {
         }
     }
 }
-
-export const getLatestItemInArray = (objArray: object[]): any => {
-    return objArray[objArray.length - 1]
-}
