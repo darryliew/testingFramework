@@ -1,0 +1,32 @@
+{
+  "name": "testingframework",
+  "version": "1.0.0",
+  "description": "testingframework",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js -f json:report/cucumber_report.json && node index.js && ./node_modules/.bin/cross-cat report/cucumber_report.json | ./node_modules/.bin/cucumber-junit > report/cucumber_report.xml"
+  },
+  "dependencies": {
+    "@types/deep-equal-in-any-order": "1.0.1",
+    "axios": "0.21.1",
+    "chai": "4.3.4",
+    "cucumber": "5.1.0",
+    "cucumber-html-reporter": "5.4.0",
+    "deep-equal-in-any-order": "1.0.28",
+    "dotenv": "8.2.0",
+    "neverthrow": "2.7.1",
+    "ts-node": "8.10.2",
+    "typescript": "3.9.10",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "@types/axios": "0.14.0",
+    "@types/chai": "4.2.21",
+    "@types/cucumber": "6.0.1",
+    "@types/node": "13.13.14",
+    "@types/uuid": "8.3.1",
+    "cross-cat": "1.0.0",
+    "cucumber-junit": "1.7.1",
+    "mem": "6.1.1",
+    "winston": "3.3.3"
+  }
+}
