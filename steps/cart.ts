@@ -18,8 +18,8 @@ When('I view my cart and verify the data is correct', async function (table: Tab
     let i = 0
     for (const [responseKey, responseValue] of entries) {
         const row = rows[i];
-        expect(responseKey).to.be.equals(row[0]);
-        parseInt(row[1]) ? expect(parseInt(row[1])).to.be.equals(responseValue) : expect(row[1]).to.be.equals(responseValue);
+        expect(responseKey).to.equal(row[0]);
+        parseInt(row[1]) ? expect(parseInt(row[1])).to.equal(responseValue) : expect(row[1]).to.equal(responseValue);
         i++;
     }
 })
