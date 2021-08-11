@@ -1,6 +1,6 @@
 # How to run testingFramework
 
-Installing NodeJS + Yarn + Docker dependency installation
+Installing NodeJS + Yarn + Docker installation
 1. Install NodeJS(choose the version your computer is required - https://nodejs.org/en/download/)
 * Once NodeJs is finished, run `npm -v` and `npm -v` to verify installation
 2. Installing Yarn
@@ -11,7 +11,8 @@ Installing NodeJS + Yarn + Docker dependency installation
 * Once docker is installed, run `docker -v` to verify installation
 ---
 In your terminal or command line
-1. Run the command `yarn install` for packages installations.
+1. Run the command `npm install` for dependency installations
+2. Run the command `yarn install` for packages installations
 ---
 ### Starting WireMock Service
 1. Run the command `docker pull rodolpheche/wiremock` to pull down the image
