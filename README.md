@@ -1,8 +1,8 @@
 # How to run testingFramework
 
-Installing NodeJS + Yarn + Docker installation
+Installing NodeJS + Yarn + Docker
 1. Install NodeJS(choose the version your computer is required - https://nodejs.org/en/download/)
-* Once NodeJs is finished, run `npm -v` and `npm -v` to verify installation
+* Once NodeJs is finished, run `npm -v` and `node -v` to verify installation
 2. Installing Yarn
 * Run the command in your terminal/cmd line `npm install --global yarn`
 * Once yarn is installed, run `yarn --version` to verify installation
