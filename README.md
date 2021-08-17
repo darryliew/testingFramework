@@ -10,9 +10,8 @@ Installing NodeJS + Yarn + Docker
 * Run the command in your terminal/cmd line `npm install -g docker`
 * Once docker is installed, run `docker -v` to verify installation
 ---
-In your terminal or command line
-1. Run the command `npm install` for dependency installations
-2. Run the command `yarn install` for packages installations
+In your terminal or command line 
+* Run the command `yarn install` for packages installations
 ---
 ### Starting WireMock Service
 1. Run the command `docker pull rodolpheche/wiremock` to pull down the image
